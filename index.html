@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lim Leaksothon - IT Engineer Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#FF4D4D',
+              darkBg: '#0F0F12',
+              cardBg: '#18181C',
+              lightBg: '#F8FAFC',
+              lightCard: '#FFFFFF',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-lightBg dark:bg-brand-darkBg text-gray-800 dark:text-gray-200 transition-colors duration-300 font-sans min-h-screen flex flex-col justify-between">
+
+  <!-- Navigation Bar -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-brand-darkBg/80 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <div class="flex items-center space-x-2">
+        <a href="#home" class="text-xl font-bold tracking-wider text-gray-900 dark:text-white">
+          Lim<span class="text-brand-red">Leaksothon</span>
+        </a>
+      </div>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="#home" class="hover:text-brand-red transition">Home</a>
+        <a href="#about" class="hover:text-brand-red transition">About</a>
+        <a href="#education" class="hover:text-brand-red transition">Education</a>
+        <a href="#techstack" class="hover:text-brand-red transition">Tech Stack</a>
+        <a href="#projects" class="hover:text-brand-red transition">Projects</a>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <!-- Dark / Light Mode Toggle Button -->
+        <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-red focus:outline-none transition">
+          <i id="theme-toggle-dark-icon" class="fas font-solid fa-moon text-lg hidden"></i>
+          <i id="theme-toggle-light-icon" class="fas font-solid fa-sun text-lg hidden"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-600 dark:text-gray-300 hover:text-brand-red focus:outline-none text-xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-brand-darkBg px-4 pt-2 pb-4 space-y-3">
+      <a href="#home" class="block hover:text-brand-red">Home</a>
+      <a href="#about" class="block hover:text-brand-red">About</a>
+      <a href="#education" class="block hover:text-brand-red">Education</a>
+      <a href="#techstack" class="block hover:text-brand-red">Tech Stack</a>
+      <a href="#projects" class="block hover:text-brand-red">Projects</a>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 space-y-24">
+
+    <!-- 1. HOME SECTION -->
+    <section id="home" class="pt-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+      <div class="flex-1 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-brand-red/30 text-brand-red text-xs font-semibold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span>
+          Available for IT & Software Projects
+        </div>
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+          Hi, I'm <br class="hidden sm:inline" /><span class="text-brand-red">Lim Leaksothon</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 font-medium">
+          IT Engineering Student & Full-Stack Developer
+        </p>
+        <p class="text-gray-600 dark:text-gray-400 max-w-xl">
+          Passionate about building scalable web applications, integrating AI capabilities, and solving complex technical challenges.
+        </p>
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+          <a href="#projects" class="px-6 py-3 rounded-lg bg-brand-red hover:bg-red-600 text-white font-semibold transition shadow-lg shadow-brand-red/20">
+            <i class="fas fa-folder-open mr-2"></i> View My Work
+          </a>
+          <a href="https://github.com/thon1688" target="_blank" class="px-6 py-3 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 font-semibold transition">
+            <i class="fab fa-github mr-2"></i> GitHub Profile
+          </a>
+        </div>
+      </div>
+
+      <!-- Profile Avatar / Hero Image Card -->
+      <div class="w-full max-w-sm flex justify-center">
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-brand-red to-orange-500 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-500"></div>
+          <div class="relative rounded-2xl bg-white dark:bg-brand-cardBg border border-gray-200 dark:border-gray-800 p-4 shadow-xl">
+            <img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?w=500&auto=format&fit=crop&q=80" alt="Profile" class="rounded-xl w-full h-80 object-cover" />
+            <div class="mt-4 p-3 rounded-lg bg-gray-100 dark:bg-gray-800/80 text-center">
+              <span class="text-xs font-semibold uppercase text-brand-red">Information Technology Engineering</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section id="about" class="space-y-6">
+      <div class="border-b border-gray-200 dark:border-gray-800 pb-4">
+        <h2 class="text-3xl font-bold tracking-tight">About <span class="text-brand-red">Me</span></h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:col-span-2 p-6 rounded-2xl bg-white dark:bg-brand-cardBg border border-gray-200 dark:border-gray-800 shadow-sm space-y-4">
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            I am an Information Technology Engineering student with a strong passion for software architecture, API integration, and web applications. My focus lies in developing clean, responsive interfaces coupled with reliable backend solutions.
+          </p>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            Whether working with Python automation scripts, RESTful APIs, or modern frontend frameworks, I am dedicated to writing readable, maintainable, and efficient code.
+          </p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white dark:bg-brand-cardBg border border-gray-200 dark:border-gray-800 shadow-sm flex flex-col justify-center space-y-4">
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-graduation-cap text-brand-red text-xl"></i>
+            <div>
+              <p class="text-xs text-gray-500 uppercase">Degree</p>
+              <p class="font-semibold">IT Engineering</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-code text-brand-red text-xl"></i>
+            <div>
+              <p class="text-xs text-gray-500 uppercase">Focus</p>
+              <p class="font-semibold">Web Development & AI Integrations</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. EDUCATION SECTION -->
+    <section id="education" class="space-y-6">
+      <div class="border-b border-gray-200 dark:border-gray-800 pb-4">
+        <h2 class="text-3xl font-bold tracking-tight">Education</h2>
+      </div>
+      <div class="space-y-6">
+        <!-- Timeline Item 1 -->
+        <div class="relative pl-8 border-l-2 border-brand-red space-y-2">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-brand-red border-4 border-white dark:border-brand-darkBg"></div>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-brand-red/10 text-brand-red">Bachelor's Degree</span>
+          <h3 class="text-xl font-bold pt-1">Bachelor of Engineering in Information Technology</h3>
+          <p class="text-sm text-gray-500">Royal University / Institute of Technology</p>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Studied core IT engineering fundamentals including Software Engineering, Cryptography & Network Security, Web Development, and FinTech Systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TECH STACK SECTION -->
+    <section id="techstack" class="space-y-6">
+      <div class="border-b border-gray-200 dark:border-gray-800 pb-4">
+        <h2 class="text-3xl font-bold tracking-tight">Tech <span class="text-brand-red">Stack</span></h2>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div class="p-4 rounded-xl bg-white dark:bg-brand-cardBg border border-gray-200 dark:border-gray-800 text-center space-y-2 hover:border-brand-red transition">
+          <i class="fab fa-python text-3xl text-yellow-500"></i>
+          <p class="font-semibold text-sm">Python</p>
+        </div>
+        <div class="p-4 rounded-xl bg-white dark:bg-brand-cardBg border border-gray-200 dark:border-gray-800 text-center space-y-2 hover:border-brand-red transition">
+          <i class="fab fa-js text-3xl text-yellow-400"></i>
+          <p class="font-semibold text-sm">JavaScript</p>
+        </div>
+        <div class="p-4 rounded-xl bg-white dark:bg-brand-cardBg border border-gray-200 dark:border-gray-800 text-center space-y-2 hover:border-brand-red transition">
+          <i class="fab fa-html5 text-3xl text-orange-500"></i>
+          <p class="font-semibold text-sm">HTML5 / CSS3</p>
+        </div>
+        <div class="p-4 rounded-xl bg-white dark:bg-brand-cardBg border border-gray-200 dark:border-gray-800 text-center space-y-2 hover:border-brand-red transition">
+          <i class="fab fa-react text-3xl text-cyan-400"></i>
+          <p class="font-semibold text-sm">React / Web UI</p>
+        </div>
+        <div class="p-4 rounded-xl bg-white dark:bg-brand-cardBg border border-gray-200 dark:border-gray-800 text-center space-y-2 hover:border-brand-red transition">
+          <i class="fas fa-brain text-3xl text-emerald-400"></i>
+          <p class="font-semibold text-sm">Gemini API</p>
+        </div>
+        <div class="p-4 rounded-xl bg-white dark:bg-brand-cardBg border border-gray-200 dark:border-gray-800 text-center space-y-2 hover:border-brand-red transition">
+          <i class="fab fa-git-alt text-3xl text-orange-600"></i>
+          <p class="font-semibold text-sm">Git / GitHub</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PROJECTS SECTION -->
+    <section id="projects" class="space-y-6">
+      <div class="border-b border-gray-200 dark:border-gray-800 pb-4">
+        <h2 class="text-3xl font-bold tracking-tight">Featured <span class="text-brand-red">Projects</span></h2>
+        <p class="text-sm text-gray-500 mt-1">Each project features video demonstrations, full code links, and detailed system overviews.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- PROJECT 1 -->
+        <div class="rounded-2xl bg-white dark:bg-brand-cardBg border border-gray-200 dark:border-gray-800 overflow-hidden shadow-lg flex flex-col justify-between">
+          <div>
+            <!-- Video Container -->
+            <div class="relative w-full aspect-video bg-black">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Project Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="p-6 space-y-3">
+              <span class="text-xs font-semibold px-2 py-1 rounded bg-brand-red/10 text-brand-red">AI & Telegram Integration</span>
+              <h3 class="text-xl font-bold">Curriculum Vitae Tracker AI</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                An automated AI document parsing system integrated with a Telegram Bot and the Gemini API. Automatically extracts candidate skills, experience, and contact info from uploaded resume PDFs.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">Python</span>
+                <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">Gemini API</span>
+                <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">Telegram Bot SDK</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex gap-4">
+            <a href="https://github.com/thon1688" target="_blank" class="flex-1 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-brand-red hover:text-white text-center text-sm font-semibold transition">
+              <i class="fab fa-github mr-1"></i> View Code
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="rounded-2xl bg-white dark:bg-brand-cardBg border border-gray-200 dark:border-gray-800 overflow-hidden shadow-lg flex flex-col justify-between">
+          <div>
+            <!-- Video Container -->
+            <div class="relative w-full aspect-video bg-black">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Project Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="p-6 space-y-3">
+              <span class="text-xs font-semibold px-2 py-1 rounded bg-brand-red/10 text-brand-red">Augmented Reality</span>
+              <h3 class="text-xl font-bold">Unity AR Face Filter</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                Interactive real-time Augmented Reality face overlay application developed in Unity using XR Origin and AR Face Manager components.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">Unity</span>
+                <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">C#</span>
+                <span class="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">AR Foundation</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex gap-4">
+            <a href="https://github.com/thon1688" target="_blank" class="flex-1 py-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-brand-red hover:text-white text-center text-sm font-semibold transition">
+              <i class="fab fa-github mr-1"></i> View Code
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 dark:border-gray-800 py-6 text-center text-sm text-gray-500">
+    <p>© <span id="year"></span> Lim Leaksothon. Hosted on Vercel.</p>
+  </footer>
+
+  <!-- Theme & Mobile Nav Script -->
+  <script>
+    // Theme toggle functionality
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    if (localStorage.getItem('color-theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+      lightIcon.classList.remove('hidden');
+    } else {
+      document.documentElement.classList.add('dark');
+      darkIcon.classList.remove('hidden');
+    }
+
+    themeToggleBtn.addEventListener('click', function() {
+      darkIcon.classList.toggle('hidden');
+      lightIcon.classList.toggle('hidden');
+
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Set dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
